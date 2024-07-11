@@ -1,4 +1,13 @@
-# 오라클 DBMS 의 특징
+# 오라클 DBMS
+
+## 오라클 다운로드
+
+- http://oracle.com 접속
+- Developers -> Developers Resource Center -> Downloads 이동
+- Database -> Database Express Edition
+- Developer Tools -> SQL Developer
+
+## 오라클 DBMS 의 특징
 
 - 오라클 DBMS 는 사용자 = 데이터 저장소 가 되어 DBMS 에 접속(Login)한 사용자는 자신의 DB에만 보통 접근이 가능하다
 - 오라클은 DB 저장소개념으로 TableSpace 라는 것을 사용한다.
