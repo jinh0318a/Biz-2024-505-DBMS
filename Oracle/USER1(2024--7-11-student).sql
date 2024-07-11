@@ -39,7 +39,7 @@ st_tel VARCHAR2(20) not null
 
 );
 
--- drop table tbl_student;
+drop table tbl_student;
 /*
 다음 3개 데이터 추가
 2400001 홍길동, 정보통신, 3학년, 010-1111-1111
@@ -83,3 +83,27 @@ select * from tbl_student where st_name='이몽룡';
 -- update, delete 하고자하는 데이터의 pk 컬럼을 반드시 확인 한 후
 -- pk 컬럼을 where 절에 사용하여 실행해야 한다
 update tbl_student SET st_tel='010-333-3456' where st_num=(select st_num from tbl_student where st_name='이몽룡' and st_tel='010-3333-3333');
+
+
+create table tbl_student(
+st_num	VARCHAR2(5)		PRIMARY KEY,
+st_name	nVARCHAR2(20)	NOT NULL,
+st_dept	nVARCHAR2(20)	NOT NULL,
+st_grade	NUMBER		,
+st_tel	VARCHAR2(20)	NOT NULL,	
+st_addr	nVARCHAR2(125)		
+
+);
+
+
+select * from tbl_student;
+select count(*) from tbl_student;
+
+-- 학생데이터 중에서 학과가 국사학 전공인 학생의 리스트
+-- 전체 데이터중에서 특정한 조건(WHERE)을 부여하여 리스트의 일부만 출력하는 것을 SELECTION 이라고 한다.
+select * from tbl_student where st_dept='국사학과';
+-- select * from tbl_student where st_dept like '%국사%';
+
+-- 학생데이터 중에서 학생이름, 전화번호 항목만 출력 이름순으로 정렬
+ select st_name, st_tel from tbl_student order by st_name;
+
