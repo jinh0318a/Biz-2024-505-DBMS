@@ -105,5 +105,8 @@ select * from tbl_student where st_dept='국사학과';
 -- select * from tbl_student where st_dept like '%국사%';
 
 -- 학생데이터 중에서 학생이름, 전화번호 항목만 출력 이름순으로 정렬
+-- 전체 컬럼중에 특정한 칼럼만 지정하여 화면에 보이도록 하는 것을 Projection 이라고 한다
  select st_name, st_tel from tbl_student order by st_name;
+ 
+ 
 
