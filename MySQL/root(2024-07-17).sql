@@ -46,4 +46,8 @@ grant all privileges on mydb.* to 'user1'@'localhost';
 
 drop user 'user1'@'localhost';
 
+delete from mysql.user where User ='user1';
 
+delete from mysql.db where User ='user1';
+
+flush privileges;
